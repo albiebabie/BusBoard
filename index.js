@@ -21,11 +21,22 @@ request(
 );
 
 function printNextFiveBuses(listOfBusArrivals) {
+  console.log("***************************************************** \n");
   for (i = 0; i < Math.min(listOfBusArrivals.length, 5); i++) {
     const busArrival = listOfBusArrivals[i];
     console.log(i + 1);
-    console.log("************************************************** \n");
-    console.log(busArrival);
+    console.log(
+      "_______________________________________________________________________________________________________________\n"
+    );
+    console.log(
+      "The next bus to arrive at this stop will be the " +
+        busArrival["lineName"] +
+        " towards " +
+        busArrival["destinationName"] +
+        ". Arriving in " +
+        (busArrival["timeToStation"] / 60).toFixed(0) +
+        " minutes.\n\n"
+    );
   }
 }
 
